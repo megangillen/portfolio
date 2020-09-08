@@ -12,7 +12,7 @@
   <body id="home-page">
     <!-- For the header -->
     <header>
-      <div>
+      <div class="container">
 
         <nav>
           <ul>
@@ -20,7 +20,7 @@
             <li><a class="menu-link" href="about.html">About</a></li>
             <li><a class="menu-link" href="#contact">Contact</a></li>
           </ul>
-          <a href="index.html">
+          <a class="logo" href="index.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="44" viewBox="0 0 56 44">
             <text id="MG" transform="translate(28 32)" fill="#023960" font-size="32" font-family="AvenirNext-Bold, Avenir Next" font-weight="700"><tspan x="-27.584" y="0">MG</tspan></text>
           </svg>
@@ -48,17 +48,21 @@
 
 <!-- For the sections -->
     <main>
-        <div id='hero'> <!--start HERO section-->
+        <div id="hero"> <!--start HERO section-->
+          <div class="container">
 
           <h1>Megan Gillen | UI/UX Designer</h1>
 
           <p><span>I am a UI/UX Designer with a background in digital advertising and a degree in International Business and Marketing. I enjoy applying my analytical skills and attention to detail toward designing digital products that are easy to use.</span> </p>
+          </div>
         </div> <!--end HERO section-->
 
-        <div id='work'> <!--start WORK section-->
+        <div id="work"> <!--start WORK section-->
+          <div class="container">
+
           <h2>Work</h2>
 
-        <div> <!--open row for 2 columns - PROJECT 1-->
+        <div class="row"> <!--open row for 2 columns - PROJECT 1-->
         <div> <!--start first column (for image)-->
           <picture>
             <source srcset="img/homepage/homepage_smartcents@1x.jpg" media="(max-width:767px)">
@@ -72,7 +76,7 @@
           <a href="smart-cents.html">See More</a>
         </div> <!--end second column-->
         </div> <!--end 2 columns - PROJECT 1-->
-        <div> <!--open row for 2 columns - PROJECT 2-->
+        <div class="row"> <!--open row for 2 columns - PROJECT 2-->
         <div> <!--start first column (for image)-->
           <picture>
             <source srcset="img/homepage/homepage_noted@1x.jpg" media="(max-width:767px)">
@@ -86,7 +90,7 @@
           <a href="noted.html">See More</a>
         </div> <!--end second column-->
         </div> <!--end 2 columns - PROJECT 2-->
-        <div> <!--open row for 2 columns - PROJECT 3-->
+        <div class="row"> <!--open row for 2 columns - PROJECT 3-->
         <div> <!--start first column (for image)-->
           <picture>
             <source srcset="img/homepage/homepage_sweettooth@1x.jpg" media="(max-width:767px)">
@@ -100,7 +104,7 @@
           <a href="sweet-tooth.html">See More</a>
         </div> <!--end second column-->
         </div> <!--end 2 columns - PROJECT 3-->
-        <div> <!--open row for 2 columns - PROJECT 4-->
+        <div class="row"> <!--open row for 2 columns - PROJECT 4-->
         <div> <!--start first column (for image)-->
           <picture>
             <source srcset="img/homepage/homepage_musicmode@1x.jpg" media="(max-width:767px)">
@@ -114,14 +118,14 @@
           <a href="music-mode.html">See More</a>
         </div> <!--end second column-->
         </div> <!--end 2 columns - PROJECT 4-->
+        </div>
         </div><!--end WORK section-->
     </main>
 
 <!-- For the footer  -->
 <footer id="contact">
-  <div>
+  <div class="container">
     <h2>Get in Touch</h2>
-  </div>
     <div> <!--social media layout and placeholders-->
       <ul>
         <li><a href="https://www.behance.net/megangillen1" target="_blank">
@@ -151,6 +155,7 @@
       </ul>
     <p>Copyright Megan Gillen 2020</p>
   </div> <!--end social media section-->
+</div>
 </footer>
   </body>
 </html>
