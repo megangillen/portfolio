@@ -44,7 +44,7 @@ nav > ul > li > a:visited{
 }
 nav > ul > li > a:focus{
   text-decoration: none;
-  color: #747474
+  color: #023960
 }
 nav > ul > li > a:hover{
   text-decoration: none;
@@ -53,6 +53,16 @@ nav > ul > li > a:hover{
 nav > ul > li > a:active{
   text-decoration: none;
   color: #023960
+}
+#social-header ul {
+  list-style-type: none;
+  padding: 0;
+}
+#social-header li {
+  display: inline-block;
+}
+#social-header a{
+  padding: 0 2px;
 }
 main {
   padding-top: 230px;
@@ -152,9 +162,138 @@ a:active { /* selected link */
 #work h2 {
   text-align: center;
 }
-.logo {
+#logo {
   max-width: 250px;
 }
 .contact {
   text-align: center;
+}
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.sun {
+  animation: 6s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation: 20s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 24s cloud-move-reverse infinite alternate linear;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+
+    padding: 20px 0 13px;
+  }
+  nav {
+      width: auto;
+      float: left
+  }
+  #social-header {
+      width: auto;
+      float: right;
+  }
+  #logo{
+    width: auto;
+    text-align:center;
+
+  }
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding-top: 140px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+  .col-md-6 {
+    width: 50%;
+  }
+  [class*="col-"] {
+  float: left;
+  padding: 0 10px;
+  }
+  #about-page h3 {
+    margin-top: 0;
+  }
+  #about-page h2{
+    text-align:center;
+    margin-top: 10px;
+  }
+
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  header {
+    padding: 20px 0 13px;
+  }
+  nav {
+      width: auto;
+      float: left
+  }
+  #social-header {
+      width: auto;
+      float: right;
+  }
+  #logo{
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding-top: 140px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  [class*="col-"] {
+  float: left;
+  padding: 0 10px;
+  }
+  #about-page h3 {
+    margin-top: 0;
+  }
+  #about-page h2{
+    text-align:center;
+    display: inline-block;
+  }
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
 }
