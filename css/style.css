@@ -22,7 +22,6 @@ header {
   padding: 10px 0;
   border-bottom: 10px solid #D5D5D5;
   display: inline-block;
-  text-align: center;
   margin: 0 auto;
   box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
@@ -30,8 +29,30 @@ nav > ul {
   list-style-type: none;
   padding: 0;
 }
-nav > ul > li {
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+#navigation-bar, #navigation-bar.responsive {
+  position: relative;
+}
+#navigation-bar .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+.navtoggle.responsive {
+  text-align: center;
+}
+.navtoggle.responsive nav>ul>li {
+  display: block;
+  text-align: center;
+}
+.navtoggle.responsive li  {
   display: inline-block;
+}
+nav>ul>li{
+  display: none;
 }
 nav > ul > li > a {
   padding: 0 12px;
@@ -57,15 +78,14 @@ nav > ul > li > a:active{
 #social-header ul {
   list-style-type: none;
   padding: 0;
-}
-#social-header li {
-  display: inline-block;
+  margin: 0;
 }
 #social-header a{
+
   padding: 0 2px;
 }
 main {
-  padding-top: 230px;
+  padding-top: 127px;
 }
 #contact ul {
   list-style-type: none;
@@ -128,7 +148,7 @@ a:focus {
 a:active { /* selected link */
   color: #D5D5D5;
 }
-.button {
+.resumeButton {
   display: inline-block;
   background-color: #8EC3AE;
   color: #023960;
@@ -140,18 +160,18 @@ a:active { /* selected link */
   transition: 0.2s opacity;
   margin: 10px 0;
 }
-.button:visited  {
+.resumeButton:visited  {
   opacity: 0.60;
   color: #023960;
   text-decoration: none;
 }
-.button:hover,
-.button:focus {
+.resumeButton:hover,
+.resumeButton:focus {
   opacity: 0.75;
   color: #023960;
   text-decoration: none;
 }
-.button:active  {
+.resumeButton:active  {
   opacity: 0.60;
   color: #023960;
   text-decoration: none;
@@ -181,7 +201,7 @@ a:active { /* selected link */
   text-align: center;
 }
 #logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 .contact {
   text-align: center;
@@ -220,12 +240,29 @@ a:active { /* selected link */
 .birds {
   animation: 16s birds-move-reverse infinite alternate linear;
 }
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 10px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: transparent;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+#myBtn:hover {
+  opacity: 0.75;
+}
+#myBtn svg {
+        width:50%;
+    }
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
-
+    text-align:center;
     padding: 20px 0 13px;
   }
   nav {
@@ -236,6 +273,15 @@ Medium devices (640px and larger)
       width: auto;
       float: right;
       padding-left: 71px;
+  }
+  #social-header li {
+    display: inline-block;
+  }
+  #social-header li:last-child{
+    display:none;
+  }
+  #social-header ul {
+    margin: 1em 0;
   }
   #logo{
     width: auto;
@@ -248,8 +294,12 @@ Medium devices (640px and larger)
     font-size: 18px;
   }
   main {
-    padding-top: 140px;
+    padding-top: 142px;
   }
+  nav > ul > li {
+    display: inline-block;
+  }
+
   .row::after {
     content: "";
     clear: both;
@@ -272,7 +322,23 @@ Medium devices (640px and larger)
   #skills-tools h2{
     margin-top:20px;
   }
-
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 15px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: transparent;
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+  }
+  #myBtn:hover {
+    opacity: 0.75;
+  }
+  #myBtn svg {
+          width:75%;
+      }
 }
 /* ==============================
 Large devices (1024px or larger)
@@ -333,7 +399,9 @@ Large devices (1024px or larger)
   #my-story p {
     padding-right: 20px;
   }
-
+  #myBtn svg {
+          width:100%;
+      }
 }
 /* ==============================
 X-large devices (1440px or larger)
