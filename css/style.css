@@ -7,6 +7,7 @@ Accent Mint Green: #8EC3AE
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #ffffff;
   font-family: 'Lato', sans-serif;
@@ -97,11 +98,27 @@ main {
 #contact a {
   padding: 0 10px;
 }
+#contact-me ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-links a{
+  padding: 0 12px;
+  text-decoration: none;
+  color: #111111;
+}
+.contact-links a:visited{
+  text-decoration: none;
+}
 #menu-about-active {
   color: #023960;
   font-weight:900;
 }
 #menu-work-active {
+  color: #023960;
+  font-weight:900;
+}
+#menu-contact-active {
   color: #023960;
   font-weight:900;
 }
