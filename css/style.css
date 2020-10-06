@@ -227,6 +227,7 @@ a:active { /* selected link */
 }
 #logo {
   max-width: 150px;
+  text-decoration: none;
 }
 .contact {
   text-align: center;
