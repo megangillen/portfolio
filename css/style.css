@@ -333,6 +333,7 @@ Medium devices (640px and larger)
     }
   .col-md-6 {
     width: 50%;
+    display: inline-block;
   }
   [class*="col-"] {
   float: left;
@@ -348,6 +349,7 @@ Medium devices (640px and larger)
   #skills-tools h2{
     margin-top:20px;
   }
+
   #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
